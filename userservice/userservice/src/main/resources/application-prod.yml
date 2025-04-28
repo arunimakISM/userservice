@@ -1,0 +1,14 @@
+server:
+  port: 41615
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL} #jdbc:postgresql://prod-db-host:5432/userdb
+    username: ${SPRING_DATASOURCE_USERNAME} #produser
+    password: ${SPRING_DATASOURCE_PASSWORD} #prodpassword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
